@@ -57,20 +57,21 @@ for line in ${golang_tools[@]};do
 			git clone $line &>/dev/null
 		fi
 		cd $tool
-		find_tool=$(find . -name "$tool")
-		if [ ! -d $find_tool ];then
+		min=${tool,,}
+		find_dir=$(find . -name "cmd")
+		if [ ! -d $find_dir ];then
 			find_main=$(find . -name "main.go" | awk -F'main.go' '{print $1}')
 		
 			cd $find_main && go build -o $tool .
 			cp $tool ~/go/bin/
 		else
-			cd $find_tool
-			mgo=$(find . -name "main.go" | awk -F'main.go' '{print $1}')
-			cd $mgo && go build -o $tool .
-			cp $tool ~/go/bin/
+			cd $find_dir
+			mgo=$(find . -iname "$tool")
+			cd $mgo && go build -o $min .
+			cp $min ~/go/bin/
 
 		fi
-		if [ $(which $tool 2>/dev/null) ];then
+		if [ $(which $min 2>/dev/null) ];then
 				echo -e "$tool\033[0;32m [*] Installed\033[0m"
  	        	else
                  		echo -e "$tool\033[1;31m [!] Still Not Installed \033[0"
