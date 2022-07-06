@@ -1,4 +1,4 @@
-## bugbounty-essentials
+## Bug Bounty and Pentesting Essentials Tools
 
 Made to install some bug bounty/pentest tools... **In progress!**
 
