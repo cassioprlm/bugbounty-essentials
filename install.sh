@@ -6,7 +6,15 @@ if [ $(which go) ];then
 	echo -e "\n\033[1;31mGolang Already Installed\033[0m\n";
 else
         echo -e "\n\033[1;31mInstalling Golang\033[0m\n"
-        sudo pacman -S go
+	if [ $(cat /etc/issue | awk '{print $1}') == "Arch" ];then
+		sudo pacman -Syu
+        	sudo pacman -S go
+	fi
+	if [ $(cat /etc/issue | awk '{print $1}') == "Ubuntu" ];then
+		sudo apt update
+		sudo apt upgrade
+		sudo apt install golang-go
+	fi
 fi
 
 golang_tools=(
