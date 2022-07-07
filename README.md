@@ -4,14 +4,14 @@ Made to install some bug bounty/pentest tools... **In progress!**
 
 
 ### How to Install
-Debian
+- Debian
 ```
 sudo apt update
 sudo apt upgrade -y
 sudo apt install golang-go //if golang was installed manually, ignore this!
 ./install
 ```
-Arch Linux
+- Arch Linux
 ```
 sudo pacman -Syu
 sudo pacman -S go //if golang was installed manually, ignore this!
