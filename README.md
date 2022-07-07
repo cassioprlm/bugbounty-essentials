@@ -24,24 +24,32 @@ go version
 ```
 ./install.sh
 ```
+### Install golang from Package Manager
+
 It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
 
-### How to Install
 - Debian
 ```
 sudo apt update
 sudo apt upgrade -y
 sudo apt install golang-go //if golang was installed manually, ignore this!
-./install
 ```
 - Arch Linux
 ```
 sudo pacman -Syu
-sudo pacman -S go //if golang was installed manually, ignore this!
-go version // for check if golang has installed and verifying the version
-./install
-```
+sudo pacman -S go 
+go version 
 
+```
+Set PATH environment variable and put it on .bashrc!
+```
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+```
+```
+./install.sh
+```
 
 #### Tools that will be installed
 
