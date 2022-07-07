@@ -39,7 +39,6 @@ sudo apt install golang-go //if golang was installed manually, ignore this!
 sudo pacman -Syu
 sudo pacman -S go 
 go version 
-
 ```
 Set PATH environment variable and put it on .bashrc!
 ```
