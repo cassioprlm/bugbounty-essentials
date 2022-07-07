@@ -2,24 +2,6 @@
 
 Made to install some bug bounty/pentest tools... **In progress!**
 
-
-### How to Install
-- Debian
-```
-sudo apt update
-sudo apt upgrade -y
-sudo apt install golang-go //if golang was installed manually, ignore this!
-./install
-```
-- Arch Linux
-```
-sudo pacman -Syu
-sudo pacman -S go //if golang was installed manually, ignore this!
-go version // for check if golang has installed and verifying the version
-./install
-```
-It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
-
 ### Install Golang manually
 Download the golang latest version
 - [Golang](https://go.dev/doc/install)
@@ -38,6 +20,25 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 go version
 ```
+**It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
+
+### How to Install
+- Debian
+```
+sudo apt update
+sudo apt upgrade -y
+sudo apt install golang-go //if golang was installed manually, ignore this!
+./install
+```
+- Arch Linux
+```
+sudo pacman -Syu
+sudo pacman -S go //if golang was installed manually, ignore this!
+go version // for check if golang has installed and verifying the version
+./install
+```
+
+
 #### Tools that will be installed
 
 - gron
