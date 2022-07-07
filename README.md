@@ -13,8 +13,8 @@ sudo apt install golang-go //if golang was installed manually, ignore this!
 It's important to remember that is needed golang >= 1.17. If apt install a old version the tool will not work, so is higly recommended to install manually!
 
 #### Golang
-Download Latest golang version
-- [Golang Latest Version](https://go.dev/doc/install)
+Download the golang latest version
+- [Golang](https://go.dev/doc/install)
 
 1. Remove any previous Go installation by deleting the /usr/local/go folder (if it exists), then extract the archive you just downloaded into /usr/local, creating a fresh Go tree in /usr/local/go: 
 ```
