@@ -14,12 +14,6 @@ else
         echo -e "\n\033[1;31mGolang is required! Please install golang >= 1.17\033[0m\n";
 	exit 1
 fi
-
-#set the gopath environment variable
-echo export PATH=$PATH:/usr/local/go/bin >> ~/.bashrc
-echo export GOPATH=$HOME/go >> ~/.bashrc
-echo export PATH=$PATH:$GOROOT/bin:$GOPATH/bin >> ~/.bashrc
-	
 	
 golang_tools=(
         "https://github.com/tomnomnom/gron"
