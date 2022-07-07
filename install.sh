@@ -1,22 +1,17 @@
 #!/bin/bash
  
-# Checking if golang is installed
+# install golang latest version
  
 if [ $(which go) ];then
-	go_version=$(go version | awk -F'go' '{print $3}' |awk -F' ' '{print $1}' | cut -c3-4)
-	if [[ $go_version -ge 17 ]];then
-		echo -e "\n\033[0;32mGolang Already Installed\033[0m\n";
-	else
-		echo -e "\n\033[0;32mGolang version less than 1.17! Please install a version >= 1.17 \033[0m\n"
-		exit 1
-	fi
+	echo -e "\n\033[0;32mGolang Already Installed\033[0m\n";
 else
-        echo -e "\n\033[1;31mGolang is required! Please install golang >= 1.17\033[0m\n";
-	exit 1
+        echo -e "\n\033[1;31mGolang is not installed!\033[0m\n";
 fi
 	#set the gopath environment variable
-	export GOPATH=$HOME/go
-        export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+	echo export PATH="$"PATH:/usr/local/go/bin >> ~/.bashrc
+	echo export GOPATH="$"HOME/go >> ~/.bashrc
+        echo export PATH="$"PATH:"$"GOROOT/bin:$GOPATH/bin >> ~/.bashrc
+	source ~/.bashrc
 
 golang_tools=(
         "https://github.com/tomnomnom/gron"
