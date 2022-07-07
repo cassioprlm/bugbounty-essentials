@@ -47,6 +47,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
+And finally run the tool
 ```
 ./install.sh
 ```
