@@ -3,19 +3,13 @@
 # install golang latest version
  
 if [ $(which go) ];then
-	echo -e "\n\033[1;31mGolang Already Installed\033[0m\n";
+	echo -e "\n\033[0;32mGolang Already Installed\033[0m\n";
 else
-        echo -e "\n\033[1;31mInstalling Golang\033[0m\n"
-	if [ $(cat /etc/issue | awk '{print $1}') == "Arch" ];then
-		sudo pacman -Syu
-        	sudo pacman -S go
-	fi
-	if [ $(cat /etc/issue | awk '{print $1}') == "Ubuntu" ];then
-		sudo apt update
-		sudo apt upgrade
-		sudo apt install golang-go
-	fi
+        echo -e "\n\033[1;31mGolang is not installed!\033[0m\n";
 fi
+	#set the gopath environment variable
+	export GOPATH=$HOME/go
+        export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 golang_tools=(
         "https://github.com/tomnomnom/gron"
@@ -42,9 +36,8 @@ golang_tools=(
 for line in ${golang_tools[@]};do
         nohttps=$(echo $line | awk -F// '{print $2}')
         echo -e "\033[1;31mDownloading \033[0m\033[01;32m$nohttps\033[01;37m";
-        go install $nohttps@latest 2>/dev/null;
+        go install $nohttps@latest &>/dev/null;
 done
-#
 
 echo -e "\n\033[1;31mInstalled tools\033[0m\n"
 
@@ -54,7 +47,7 @@ for line in ${golang_tools[@]};do
         	echo -e "$tool\033[0;32m [*] Installed\033[0m"
         else
         	echo -e "$tool\033[1;31m [!] Not installed \033[0m"
-        	echo -e "\033[1;31m \nRetrying to install $tool... \033[0m"
+        	echo -e "\033[1;31mRetrying to install $tool... \033[0m"
                	if [ ! -d ~/tools ];then
                 	mkdir ~/tools
 			cd ~/tools
@@ -75,7 +68,7 @@ for line in ${golang_tools[@]};do
 		else
 			cd $find_dir
 			mgo=$(find . -iname "$tool")
-			cd $mgo && go build -o $min .
+			cd $mgo && go build -o $min . &>/dev/null
 			cp $min ~/go/bin/
 
 		fi
