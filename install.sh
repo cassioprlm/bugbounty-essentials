@@ -8,9 +8,11 @@ if [ $(which go) ];then
 		echo -e "\n\033[0;32mGolang Already Installed\033[0m\n";
 	else
 		echo -e "\n\033[0;32mGolang version less than 1.17! Please install a version >= 1.17 \033[0m\n"
+		exit 1
 	fi
 else
         echo -e "\n\033[1;31mGolang is required! Please install golang >= 1.17\033[0m\n";
+	exit 1
 fi
 	#set the gopath environment variable
 	export GOPATH=$HOME/go
