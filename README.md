@@ -15,7 +15,7 @@ sudo apt install golang-go //if golang was installed manually, ignore this!
 ```
 sudo pacman -Syu
 sudo pacman -S go //if golang was installed manually, ignore this!
-go version // for check if golang has installed and verify the version
+go version // for check if golang has installed and verifying the version
 ./install
 ```
 It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
@@ -28,11 +28,11 @@ Download the golang latest version
 ```
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz // (You may need to run the command as root or through sudo).
 ```
-2. Add /usr/local/go/bin to the PATH environment variable and .bashrc. 
+2. Set PATH environment variable and put it on .bashrc!
 ```
-echo export PATH=$PATH:/usr/local/go/bin >> ~/.bashrc
-echo export GOPATH=$HOME/go >> ~/.bashrc
-echo export PATH=$PATH:$GOROOT/bin:$GOPATH/bin >> ~/.bashrc
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 3. Verify that you've installed Go by opening a command prompt and typing the following command: 
 ```
