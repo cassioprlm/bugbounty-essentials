@@ -2,6 +2,15 @@
 
 Made to install some bug bounty/pentest tools... **In progress!**
 
+
+### How to Install
+```
+sudo apt update
+sudo apt upgrade -y
+sudo apt install golang-go
+./install
+```
+
 #### Tools that will be installed
 
 - gron
