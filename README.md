@@ -20,7 +20,7 @@ go version // for check if golang has installed and verify the version
 ```
 It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
 
-### Golang
+### Install Golang manually
 Download the golang latest version
 - [Golang](https://go.dev/doc/install)
 
