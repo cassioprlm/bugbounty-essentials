@@ -20,7 +20,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 go version
 ```
-**It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!**
+It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
 
 ### How to Install
 - Debian
