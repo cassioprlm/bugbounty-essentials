@@ -4,7 +4,12 @@ Made to install some bug bounty/pentest tools... **In progress!**
 
 
 ### How to Install
-
+```
+sudo apt update
+sudo apt upgrade -y
+sudo apt install golang-go //if golang was installed manually, ignore this!
+./install
+```
 It's important to remember that is needed golang >= 1.17. If apt install a old version the tool will not work, so is higly recommended to install manually!
 
 #### Golang
@@ -23,14 +28,6 @@ export PATH=$PATH:/usr/local/go/bin
 ```
 go version
 ```
-
-```
-sudo apt update
-sudo apt upgrade -y
-sudo apt install golang-go //if golang was installed manually, ignore this!
-./install
-```
-
 #### Tools that will be installed
 
 - gron
