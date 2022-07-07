@@ -14,7 +14,7 @@ It's important to remember that is needed golang >= 1.17. If apt install a old v
 
 #### Golang
 Download Latest golang version
-- [](https://go.dev/doc/install)
+- [Golang Latest Version](https://go.dev/doc/install)
 
 1. Remove any previous Go installation by deleting the /usr/local/go folder (if it exists), then extract the archive you just downloaded into /usr/local, creating a fresh Go tree in /usr/local/go: 
 ```
