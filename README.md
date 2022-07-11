@@ -2,7 +2,7 @@
 
 Made to install some bug bounty/pentest tools... **In progress!**
 
-### Install Golang manually
+### Install Golang 
 Download the golang latest version
 - [Golang](https://go.dev/doc/install)
 
