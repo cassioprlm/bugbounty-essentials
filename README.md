@@ -26,7 +26,7 @@ go version
 ```
 ### Install golang from Package Manager
 
-It's important to remember that is needed golang >= 1.17. If the apt install a old version the tool will not work, so is recommended to pay attention on this step!
+It's important to remember that is needed golang >= 1.17. If the apt install an old version the tool will not work, so is recommended to pay attention on this step!
 
 - Debian
 ```
