@@ -10,7 +10,7 @@ Download the golang latest version
 ```
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz // (You may need to run the command as root or through sudo).
 ```
-2. Set PATH environment variable and put it on .bashrc!
+2. Set the PATH environment variable and put it on .bashrc!
 ```
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
